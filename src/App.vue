@@ -1,28 +1,38 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container">
+    <div class="page-header text-secondary">
+      <h1 class="display-4">
+        <a class="text-" href="#/">
+           <font-awesome-icon icon="tasks" />
+          Ticket Manager!
+        </a>
+      </h1>
+      <hr/>
+    </div>
+
+    <router-view />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  name: "App"
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scoped>
+.container {
+  padding-top: 15px;
 }
+
+a:link, a:active, a:visited {
+    color: #545b62;
+
+  text-decoration: none;
+}
+ a:hover{
+  color: #34495e;
+
+ }
+
 </style>

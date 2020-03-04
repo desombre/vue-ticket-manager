@@ -1,0 +1,39 @@
+{
+    "overviewElements": [
+        {
+            "id": 0,
+            "title": "Task Overview",
+            "description": "View, filter and search your tasks.",
+            "navigationText": "Go to the task overview!",
+            "href": "/overview"
+        },
+        {
+            "id": 1,
+            "title": "Add Task",
+            "description": "Add a new Task and configure it.",
+            "navigationText": "Create a new task!",
+            "href": "/create"
+        },
+        {
+            "id": 2,
+            "title": "Analysis",
+            "description": "Get an overview over your current status.",
+            "navigationText": "View the analysis!",
+            "href": "/analysis"
+        },
+        {
+            "id": 3,
+            "title": "Settings",
+            "description": "Change and adapt the Settings to your preferences.",
+            "navigationText": "Go to the settings!",
+            "href": "/settings"
+        },
+        {
+            "id": 4,
+            "title": "About",
+            "description": "View the about page and support the project.",
+            "navigationText": "Go to the about page!",
+            "href": "/about"
+        }
+    ]
+}
