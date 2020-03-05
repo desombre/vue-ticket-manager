@@ -6,19 +6,19 @@
 </template>
 
 <script>
-import TicketEdit from '../components/TicketEdit'
+import TicketEdit from "../components/TicketEdit";
 
 export default {
   name: "CreateTask",
   components: {
     TicketEdit
   },
-  data(){
+  data() {
     return {
       ticket: {
         id: new Date().getMilliseconds()
       }
-    }
+    };
   }
 };
 </script>

@@ -1,12 +1,12 @@
 <template>
-  <div class="card  v-spacer">
+  <div class="card v-spacer">
     <a :href="'#/ticket?id=' +ticket.id">
       <div class="card-body padding-sm">
         <p>
           {{ticket.title}}
-          <span>{{ticket.label}}</span>
+          <span class="badge">{{ticket.label}}</span>
 
-          <span class="dot bg-primary"></span>
+          <ColorDot v-bind:color="'#20bffb'"/>
         </p>
       </div>
     </a>
@@ -14,9 +14,14 @@
 </template>
 
 <script>
+import ColorDot from './ColorDot'
+
 export default {
-  name: "TicketView",
-  props: ["ticket"]
+  name: "TicketListItem",
+  props: ["ticket"],
+  components:{
+    ColorDot
+  }
 };
 </script>
 

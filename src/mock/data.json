@@ -54,5 +54,24 @@
             "title": "Fix bugs",
             "description": "We need to fix the bugs ASAP!"
         }
-    ]
+    ],
+    "settings": {
+        "labelColors": {
+          "BUG": "#e74c3c"
+        },
+        "lifecycle": {
+          "list": ["new", "processing", "reviewing", "completed"],
+          "steps": {
+            "new": ["processing"],
+            "processing": ["reviewing"],
+            "reviewing": ["processing", "completed"]
+          },
+          "colors": {
+            "new": "#f7b731",
+            "processing": "#0fb9b1",
+            "reviewing": "#a55eea",
+            "completed": "#20bf6b"
+          }
+        }
+      }
 }
