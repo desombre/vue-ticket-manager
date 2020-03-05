@@ -1,6 +1,5 @@
 {
-    "overviewElements": [
-        {
+    "overviewElements": [{
             "id": 0,
             "title": "Task Overview",
             "description": "View, filter and search your tasks.",
@@ -34,6 +33,26 @@
             "description": "View the about page and support the project.",
             "navigationText": "Go to the about page!",
             "href": "/about"
+        }
+    ],
+
+    "tickets": [{
+            "id": 0,
+            "assignee": "Klaus Kleber",
+            "created": "",
+            "updated": "",
+            "label": "TODO",
+            "title": "Test tickets",
+            "description": "We need to test the tickets ASAP!"
+        },
+        {
+            "id": 1,
+            "assignee": "Benjamin Blümchen",
+            "created": "",
+            "updated": "",
+            "label": "BUG",
+            "title": "Fix bugs",
+            "description": "We need to fix the bugs ASAP!"
         }
     ]
 }

@@ -7,7 +7,7 @@
       <p class="card-text">
         {{overviewElement.description}}
       </p>
-      <a v-bind:href="'/#'+overviewElement.href" class="btn btn-primary">
+      <a v-bind:href="'/#'+overviewElement.href" class="btn">
           {{overviewElement.navigationText}}
         </a>
     </div>

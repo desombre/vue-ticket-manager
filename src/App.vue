@@ -20,7 +20,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .container {
   padding-top: 15px;
 }
@@ -35,4 +35,23 @@ a:link, a:active, a:visited {
 
  }
 
+
+.dot{
+  display:inline-block;
+  border-radius: 50%;
+  border: 0px;
+  margin: 0 auto;
+  padding: 0;
+  width: 15px;
+  height: 15px;
+}
+
+.v-spacer{
+  margin-top: 1px;
+  margin-bottom: 1px;  
+}
+
+.padding-sm{
+  padding: .25rem;
+}
 </style>
