@@ -5,7 +5,7 @@
         <p>
           {{ticket.title}}
 
-          <ColorDot data-toggle="tooltip" data-placement="right" v-bind:title="ticket.lifecycle"  v-bind:color="settings.lifecycle.colors[ticket.lifecycle]"/>
+          <ColorDot v-tooltip="ticket.lifecycle"  v-bind:color="settings.lifecycle.colors[ticket.lifecycle]"/>
 
 
           <span class="badge" v-bind:style="{ backgroundColor: settings.labels.colors[ticket.label]}">

@@ -8,6 +8,7 @@ import router from './router'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faTasks } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import vuetify from './plugins/vuetify';
 
 library.add(faTasks)
 
@@ -17,5 +18,6 @@ Vue.config.productionTip = false
 new Vue({
   store,
   router,
+  vuetify,
   render: h => h(App)
 }).$mount('#app')
