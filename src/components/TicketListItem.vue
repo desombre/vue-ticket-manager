@@ -1,37 +1,56 @@
 <template>
   <div class="card v-spacer">
-    <a :href="'#/ticket?id=' +ticket.id">
+    <a :href="'#/ticket?id=' + ticket.id">
       <div class="card-body padding-sm">
-        <p>
-          {{ticket.title}}
+        <div class="flex-container">
+          <div class="item">
+            {{ticket.title}}
+              <ColorDot v-bind:color="settings.lifecycle.colors[ticket.lifecycle]" />
+              <span class="tooltiptext">{{ticket.lifecycle}}</span>
+          </div>
 
-          <ColorDot v-tooltip="ticket.lifecycle"  v-bind:color="settings.lifecycle.colors[ticket.lifecycle]"/>
-
-
-          <span class="badge" v-bind:style="{ backgroundColor: settings.labels.colors[ticket.label]}">
-            {{ticket.label}}
-            </span>
-
-        </p>
+          <span
+            class="badge item"
+            v-bind:style="{ backgroundColor: settings.labels.colors[ticket.label]}"
+          >{{ticket.label}}</span>
+        </div>
       </div>
     </a>
   </div>
 </template>
 
 <script>
-import ColorDot from './ColorDot'
-import data from '../mock/data'
+import ColorDot from "./ColorDot";
+import data from "../mock/data";
 
 export default {
   name: "TicketListItem",
   props: ["ticket"],
-  components:{
+  components: {
     ColorDot
-  }, data() {
-    return{
+  },
+  data() {
+    return {
       settings: data.settings
-    }
+    };
   }
 };
 </script>
 
+<style scoped>
+.flex-container {
+  width: 100%;
+  display: inline-flex;
+
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.item {
+  display: inline-flex;
+
+  flex: none;
+
+  align-self: auto;
+}
+</style>
