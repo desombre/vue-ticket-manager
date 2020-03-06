@@ -4,9 +4,14 @@
       <div class="card-body padding-sm">
         <p>
           {{ticket.title}}
-          <span class="badge">{{ticket.label}}</span>
 
-          <ColorDot v-bind:color="'#20bffb'"/>
+          <ColorDot data-toggle="tooltip" data-placement="right" v-bind:title="ticket.lifecycle"  v-bind:color="settings.lifecycle.colors[ticket.lifecycle]"/>
+
+
+          <span class="badge" v-bind:style="{ backgroundColor: settings.labels.colors[ticket.label]}">
+            {{ticket.label}}
+            </span>
+
         </p>
       </div>
     </a>
@@ -15,12 +20,17 @@
 
 <script>
 import ColorDot from './ColorDot'
+import data from '../mock/data'
 
 export default {
   name: "TicketListItem",
   props: ["ticket"],
   components:{
     ColorDot
+  }, data() {
+    return{
+      settings: data.settings
+    }
   }
 };
 </script>

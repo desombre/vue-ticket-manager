@@ -1,77 +1,95 @@
 {
-    "overviewElements": [{
-            "id": 0,
-            "title": "Task Overview",
-            "description": "View, filter and search your tasks.",
-            "navigationText": "Go to the task overview!",
-            "href": "/overview"
-        },
-        {
-            "id": 1,
-            "title": "Add Task",
-            "description": "Add a new Task and configure it.",
-            "navigationText": "Create a new task!",
-            "href": "/create"
-        },
-        {
-            "id": 2,
-            "title": "Analysis",
-            "description": "Get an overview over your current status.",
-            "navigationText": "View the analysis!",
-            "href": "/analysis"
-        },
-        {
-            "id": 3,
-            "title": "Settings",
-            "description": "Change and adapt the Settings to your preferences.",
-            "navigationText": "Go to the settings!",
-            "href": "/settings"
-        },
-        {
-            "id": 4,
-            "title": "About",
-            "description": "View the about page and support the project.",
-            "navigationText": "Go to the about page!",
-            "href": "/about"
-        }
-    ],
-
-    "tickets": [{
-            "id": 0,
-            "assignee": "Klaus Kleber",
-            "created": "",
-            "updated": "",
-            "label": "TODO",
-            "title": "Test tickets",
-            "description": "We need to test the tickets ASAP!"
-        },
-        {
-            "id": 1,
-            "assignee": "Benjamin Blümchen",
-            "created": "",
-            "updated": "",
-            "label": "BUG",
-            "title": "Fix bugs",
-            "description": "We need to fix the bugs ASAP!"
-        }
-    ],
-    "settings": {
-        "labelColors": {
-          "BUG": "#e74c3c"
-        },
-        "lifecycle": {
-          "list": ["new", "processing", "reviewing", "completed"],
-          "steps": {
-            "new": ["processing"],
-            "processing": ["reviewing"],
-            "reviewing": ["processing", "completed"]
-          },
-          "colors": {
-            "new": "#f7b731",
-            "processing": "#0fb9b1",
-            "reviewing": "#a55eea",
-            "completed": "#20bf6b"
-          }
-        }
+  "overviewElements": [
+    {
+      "id": 0,
+      "title": "Task Overview",
+      "description": "View, filter and search your tasks.",
+      "navigationText": "Go to the task overview!",
+      "href": "/overview"
+    },
+    {
+      "id": 1,
+      "title": "Add Task",
+      "description": "Add a new Task and configure it.",
+      "navigationText": "Create a new task!",
+      "href": "/create"
+    },
+    {
+      "id": 2,
+      "title": "Analysis",
+      "description": "Get an overview over your current status.",
+      "navigationText": "View the analysis!",
+      "href": "/analysis"
+    },
+    {
+      "id": 3,
+      "title": "Settings",
+      "description": "Change and adapt the Settings to your preferences.",
+      "navigationText": "Go to the settings!",
+      "href": "/settings"
+    },
+    {
+      "id": 4,
+      "title": "About",
+      "description": "View the about page and support the project.",
+      "navigationText": "Go to the about page!",
+      "href": "/about"
+    }
+  ],
+  "tickets": [
+    {
+      "id": 0,
+      "assignee": "Klaus Kleber",
+      "created": "",
+      "updated": "",
+      "label": "TODO",
+      "title": "Test tickets",
+      "description": "We need to test the tickets ASAP!",
+      "lifecycle": "new"
+    },
+    {
+      "id": 1,
+      "assignee": "Benjamin Blümchen",
+      "created": "",
+      "updated": "",
+      "label": "BUG",
+      "title": "Fix bugs",
+      "description": "We need to fix the bugs ASAP!",
+      "lifecycle": "processing"
+    }
+  ],
+  "settings": {
+    "labels": {
+      "colors": {
+        "BUG": "#e74c3c",
+        "TODO": "#f1c40f"
       }
+    },
+    "lifecycle": {
+      "list": [
+        "new",
+        "processing",
+        "reviewing",
+        "completed"
+      ],
+      "steps": {
+        "new": [
+          "processing"
+        ],
+        "processing": [
+          "reviewing"
+        ],
+        "reviewing": [
+          "processing",
+          "completed"
+        ]
+      },
+      "colors": {
+        "new": "#f7b731",
+        "processing": "#0fb9b1",
+        "reviewing": "#a55eea",
+        "completed": "#20bf6b"
+      }
+    }
+  }
 }
