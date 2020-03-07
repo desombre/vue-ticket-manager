@@ -1,5 +1,5 @@
 module.exports = {
-  "publicPath": "/serve-vue-app",
+  "publicPath": "/vue-ticket-manager",
   "outputDir": "docs",
   "transpileDependencies": [
     "vuetify"
