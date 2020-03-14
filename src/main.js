@@ -10,6 +10,7 @@ import { faTasks } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import vuetify from './plugins/vuetify';
 
+
 library.add(faTasks)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)

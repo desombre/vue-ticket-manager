@@ -10,19 +10,24 @@
         <textarea id="description" type="textarea" v-model="ticket.description" class="form-control" />
       </div>
 
-      <button class="btn btn-success" v-on:click="saveTicket">Save</button>
+      <button class="btn btn-success" v-on:click="onSave">Save</button>
     </div>
   </div>
 </template>
 
 <script>
+import {mapActions} from "vuex"
+
+
 export default {
   name: "TicketEdit",
   props: ["ticket"],
-  methods:{
-    saveTicket() {
-      alert(JSON.stringify(this.ticket));
+  methods: {
+    ...mapActions(['addTicket']),
+    onSave(){
+      this.addTicket(this.ticket);
     }
   }
+  
 };
 </script>

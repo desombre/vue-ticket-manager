@@ -16,7 +16,7 @@ export default {
   data() {
     return {
       ticket: {
-        id: new Date().getMilliseconds()
+        id: new Date().getTime()
       }
     };
   }

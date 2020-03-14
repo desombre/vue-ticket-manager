@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <h1>This is an overview page</h1>
-  <div v-bind:key="ticket.id" v-for="ticket in tickets">
+  <div v-bind:key="ticket.id" v-for="ticket in allTickets">
      <TicketListItem v-bind:ticket="ticket" />
 
   </div>
@@ -15,17 +15,20 @@
 <script>
 import TicketListItem from '../components/TicketListItem'
 
-import data from "../mock/data.json"
+import {mapGetters, mapActions} from "vuex"
 
 export default {
   name: "Overiew",
+  methods: {
+    ...mapActions(['fetchTickets'])
+  },
   components: {
     TicketListItem
     },
-  data() {
-    return {
-      tickets: data.tickets
-    }
+  computed: mapGetters(['allTickets']),
+  created(){
+    this.fetchTickets();
   }
+ 
 };
 </script>

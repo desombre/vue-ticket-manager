@@ -1,20 +1,15 @@
 <template>
   <div>
     {{colorSetting.step}} :
-    <input type="color" class="dot" v-model="scopedColor" />
+    <input type="color" class="dot" v-model="colorSetting.color" />
   </div>
 </template>
 
 <script>
 export default {
   name: "ColorSetting",
-  props: ["colorSetting"],
-
-  data() {
-    return {
-      scopedColor: this.colorSetting.color
-    };
-  }
+  props: ["colorSetting"]
+  
 };
 </script>
 

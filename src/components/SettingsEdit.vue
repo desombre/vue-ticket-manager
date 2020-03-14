@@ -5,6 +5,7 @@
     <div>
       <button class="btn btn-success">Save</button>
     </div>
+    {{settings}}
   </div>
 </template>
 
